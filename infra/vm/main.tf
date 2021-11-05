@@ -1,8 +1,8 @@
 # Create a hadoop instance
-resource "nws_instance" "hadoop" {
-  name             = "hadoop-0"
-  display_name     = "hadoop-0"
-  group            = "feast"
+resource "nws_instance" "myinst" {
+  name             = "vm-0"
+  display_name     = "vm-0"
+  group            = "group0"
   service_offering = var.instance_type
   zone             = var.zone
   template         = var.template

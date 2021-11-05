@@ -1,7 +1,7 @@
 
 variable "zone" {
   type    = string
-  default = "zone-0"
+  default = "ru-msk-0"
 }
 
 variable "instance_type" {
@@ -11,7 +11,7 @@ variable "instance_type" {
 
 variable "template" {
   type    = string
-  default = "VM Base: Ubuntu Server 20.04.3"
+  default = "Ubuntu Server 21.10"
 }
 
 variable "network_id" {
@@ -26,5 +26,5 @@ variable "ip_address" {
 
 variable "root_disk_size" {
   type    = number
-  default = 40
+  default = 25
 }
