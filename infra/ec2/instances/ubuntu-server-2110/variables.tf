@@ -11,20 +11,25 @@ variable "instance_type" {
 
 variable "template" {
   type    = string
-  default = "Ubuntu Server 21.10"
+  default = "VM-Base: Ubuntu 21.10"
 }
 
 variable "network_id" {
   type    = string
-  default = "a9bd4055-c01a-486e-8940-7fecaec750f9"
+  default = "alfa-public"
 }
 
 variable "ip_address" {
   type    = string
-  default = "10.0.0.12"
+  default = "10.0.1.11"
 }
 
 variable "root_disk_size" {
   type    = number
-  default = 25
+  default = 12
+}
+
+variable "instance_count" {
+  type    = number
+  default = 2
 }
