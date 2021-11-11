@@ -1,7 +1,7 @@
 # Create an ubuntu instance
 resource "nws_instance" "inst" {
   count            = var.instance_count
-  group            = "group0"
+  group            = var.group
   name             = "vm-${count.index}"
   service_offering = var.instance_type
   zone             = var.zone

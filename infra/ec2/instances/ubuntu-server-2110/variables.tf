@@ -6,7 +6,7 @@ variable "zone" {
 
 variable "instance_type" {
   type    = string
-  default = "t2.small"
+  default = "t2.medium"
 }
 
 variable "template" {
@@ -16,12 +16,17 @@ variable "template" {
 
 variable "network_id" {
   type    = string
-  default = "e65038c7-1c7b-4412-9fe2-6e054f6bb0a0"
+  default = "6806ff1d-0d38-4179-9814-417365eb2852"
+}
+
+variable "group" {
+  type = string
+  default = "cluster0"
 }
 
 variable "root_disk_size" {
   type    = number
-  default = 20
+  default = 25
 }
 
 variable "instance_count" {

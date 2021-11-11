@@ -15,12 +15,12 @@ variable "domain" {
 
 variable "vpc_id" {
   type = string
-  default = "3ba886c7-8e2d-40d7-8cf2-2cd27465874f"
+  default = "712851cb-caa5-49e0-9bf2-f87f83c2d6f6"
 }
 
 variable "network_offering" {
   type = string
-  default = "5e8d4f17-5479-4f37-9282-158a39821186"
+  default = "940f1551-3d3c-438e-9698-e46456778e52"
 }
 
 variable "zone" {
