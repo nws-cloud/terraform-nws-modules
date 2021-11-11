@@ -6,7 +6,7 @@ variable "zone" {
 
 variable "instance_type" {
   type    = string
-  default = "t2.medium"
+  default = "t2.small"
 }
 
 variable "template" {
@@ -16,17 +16,12 @@ variable "template" {
 
 variable "network_id" {
   type    = string
-  default = "alfa-public"
-}
-
-variable "ip_address" {
-  type    = string
-  default = "10.0.1.11"
+  default = "e65038c7-1c7b-4412-9fe2-6e054f6bb0a0"
 }
 
 variable "root_disk_size" {
   type    = number
-  default = 12
+  default = 20
 }
 
 variable "instance_count" {

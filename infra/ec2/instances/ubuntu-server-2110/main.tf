@@ -1,13 +1,13 @@
 # Create an ubuntu instance
-resource "nws_instance" "inst0" {
-  name             = "vm-0"
-  display_name     = "vm-0"
+resource "nws_instance" "inst" {
+  count            = var.instance_count
   group            = "group0"
+  name             = "vm-${count.index}"
   service_offering = var.instance_type
   zone             = var.zone
   template         = var.template
   network_id       = var.network_id
-  ip_address       = "10.0.1.10"
+  ip_address       = "10.0.1.1${count.index}"
   root_disk_size   = var.root_disk_size
   expunge          = true
 }
