@@ -1,4 +1,4 @@
-resource "nws_vpc" "alfa-vpc" {
+resource "nws_vpc" "vpc" {
   name           = var.name
   cidr           = var.cidr
   vpc_offering   = var.vpc_offering
