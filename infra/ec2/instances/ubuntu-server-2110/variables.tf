@@ -11,16 +11,16 @@ variable "instance_type" {
 
 variable "template" {
   type    = string
-  default = "VM-Base: Ubuntu 21.10"
+  default = "Ubuntu 21.10"
 }
 
 variable "network_id" {
   type    = string
-  default = "6806ff1d-0d38-4179-9814-417365eb2852"
+  default = "44505875-2ff5-4e56-9502-26ab1a15729f"
 }
 
 variable "group" {
-  type = string
+  type    = string
   default = "cluster0"
 }
 
