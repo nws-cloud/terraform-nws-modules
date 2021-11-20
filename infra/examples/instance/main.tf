@@ -13,7 +13,7 @@ module "instance" {
   source = "../../modules/instances"
 
   zone       = var.zone
-  ip         = var.ip
+  ips        = var.ips
   network_id = var.network_id
 
 }

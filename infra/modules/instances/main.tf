@@ -10,14 +10,14 @@ terraform {
 }
 
 resource "nws_instance" "inst" {
-  # count            = var.instance_count
+  count            = var.instance_count
   group            = var.group
-  name             = var.name
-  service_offering = var.instance_type
+  name             = var.name[count.index]
+  service_offering = var.instance_type[count.index]
   zone             = var.zone
-  template         = var.template
+  template         = var.template[count.index]
   network_id       = var.network_id
-  ip_address       = var.ip
-  root_disk_size   = var.root_disk_size
+  ip_address       = var.ips[count.index]
+  root_disk_size   = var.root_disk_size[count.index]
   expunge          = true
 }

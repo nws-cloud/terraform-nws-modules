@@ -12,9 +12,9 @@ variable "network_id" {
   type        = string
 }
 
-variable "ip" {
+variable "ips" {
   description = "Your VMs IP range"
-  type        = string
+  type        = list(string)
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -22,18 +22,18 @@ variable "ip" {
 # These parameters have reasonable defaults.
 # ---------------------------------------------------------------------------------------------------------------------
 variable "name" {
-  type    = string
-  default = "VM0"
+  type    = list(string)
+  default = ["VM0", "VM1"]
 }
 
 variable "instance_type" {
-  type    = string
-  default = "t2.micro"
+  type    = list(string)
+  default = ["t2.micro", "t2.micro"]
 }
 
 variable "template" {
-  type    = string
-  default = "Ubuntu Server 21.10"
+  type    = list(string)
+  default = ["Ubuntu Server 21.10", "CentOS 7.9 Min"]
 }
 
 variable "group" {
@@ -43,12 +43,12 @@ variable "group" {
 
 variable "root_disk_size" {
   description = "Your system disk size in GB"
-  type        = number
-  default     = 10
+  type        = list(number)
+  default     = [10, 10]
 }
 
 variable "instance_count" {
   description = "How many instances of this type to create?"
   type        = number
-  default     = 1
+  default     = 2
 }

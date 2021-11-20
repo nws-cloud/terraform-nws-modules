@@ -1,0 +1,1 @@
+# Example use of NWS instance module
