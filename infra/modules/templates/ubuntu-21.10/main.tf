@@ -7,6 +7,6 @@ resource "nws_template" "templ" {
   zone             = "ru-msk-0"
   is_featured      = true
   is_public        = true
-  is_ready_timeout = 300
+  is_ready_timeout = 600
 }
 
