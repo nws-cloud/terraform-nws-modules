@@ -10,11 +10,10 @@ terraform {
 }
 
 module "instance" {
-  source = "../../modules/instance"
+  source = "../../modules/instances"
 
-  zone    = var.zone
-  name    = var.name
-  vm_name = var.vm_name
-  os_type = var.os_type
-  url     = var.url
+  zone       = var.zone
+  ip         = var.ip
+  network_id = var.network_id
+
 }

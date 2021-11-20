@@ -10,7 +10,7 @@ terraform {
 }
 
 resource "nws_instance" "inst" {
-  count            = var.instance_count
+  # count            = var.instance_count
   group            = var.group
   name             = var.name
   service_offering = var.instance_type

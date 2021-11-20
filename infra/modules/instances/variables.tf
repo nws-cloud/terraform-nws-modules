@@ -23,7 +23,7 @@ variable "ip" {
 # ---------------------------------------------------------------------------------------------------------------------
 variable "name" {
   type    = string
-  default = "My Test VM"
+  default = "VM0"
 }
 
 variable "instance_type" {
