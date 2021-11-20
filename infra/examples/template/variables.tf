@@ -1,7 +1,8 @@
 # ---------------------------------------------------------------------------------------------------------------------
-# OPTIONAL PARAMETERS
-# These parameters have reasonable defaults.
+# REQUIRED PARAMETERS
+# You must provide a value for each of these parameters.
 # ---------------------------------------------------------------------------------------------------------------------
+
 variable "zone" {
   type    = string
   default = "ru-msk-0"
@@ -12,12 +13,16 @@ variable "name" {
   default = "CentOS 7.9 Min"
 }
 
+variable "vm_name" {
+  type    = string
+  default = "My VM: CentOS 7.9 Min"
+}
+
 variable "os_type" {
   type    = string
   default = "CentOS 7.2"
 }
 
 variable "url" {
-  type    = string
-  default = "http://185.185.59.179:8000/c7-base.qcow2"
+  type = string
 }

@@ -36,7 +36,7 @@ variable "vm_name" {
 variable "timeout" {
   description = "Your template creation timeout"
   type        = number
-  default     = 900
+  default     = 1200
 }
 
 variable "hypervisor" {
