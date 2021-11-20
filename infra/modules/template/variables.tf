@@ -8,7 +8,7 @@ variable "zone" {
 }
 
 variable "name" {
-  description = "Your template name"
+  description = "Your OS standard template name"
   type        = string
 }
 
@@ -27,10 +27,16 @@ variable "url" {
 # OPTIONAL PARAMETERS
 # These parameters have reasonable defaults.
 # ---------------------------------------------------------------------------------------------------------------------
+variable "vm_name" {
+  description = "Your VM name here"
+  type        = string
+  default     = "my-vm"
+}
+
 variable "timeout" {
   description = "Your template creation timeout"
   type        = number
-  default     = 400
+  default     = 900
 }
 
 variable "hypervisor" {
@@ -40,9 +46,9 @@ variable "hypervisor" {
 }
 
 variable "format" {
-  desription = "Your VM data format"
-  type       = string
-  default    = "QCOW2"
+  description = "Your VM data format"
+  type        = string
+  default     = "QCOW2"
 }
 
 variable "is_public" {

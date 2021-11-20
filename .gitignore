@@ -1,3 +1,5 @@
 terraform.tfstate.d/
 .terraform*
 plan.out
+
+providers.tf
