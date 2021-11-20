@@ -23,17 +23,17 @@ variable "ips" {
 # ---------------------------------------------------------------------------------------------------------------------
 variable "name" {
   type    = list(string)
-  default = ["VM0", "VM1"]
+  default = ["VM0"]
 }
 
 variable "instance_type" {
   type    = list(string)
-  default = ["t2.micro", "t2.micro"]
+  default = ["t2.micro"]
 }
 
 variable "template" {
   type    = list(string)
-  default = ["Ubuntu Server 21.10", "CentOS 7.9 Min"]
+  default = ["Ubuntu Server 21.10"]
 }
 
 variable "group" {
@@ -44,11 +44,11 @@ variable "group" {
 variable "root_disk_size" {
   description = "Your system disk size in GB"
   type        = list(number)
-  default     = [10, 10]
+  default     = [10]
 }
 
 variable "instance_count" {
   description = "How many instances of this type to create?"
   type        = number
-  default     = 2
+  default     = 1
 }
