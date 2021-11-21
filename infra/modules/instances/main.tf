@@ -10,7 +10,7 @@ terraform {
 }
 
 resource "nws_instance" "inst" {
-  count            = var.instance_count
+  count            = length(var.name)
   group            = var.group
   name             = var.name[count.index]
   service_offering = var.instance_type[count.index]

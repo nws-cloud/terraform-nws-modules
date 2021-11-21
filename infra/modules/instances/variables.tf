@@ -46,9 +46,3 @@ variable "root_disk_size" {
   type        = list(number)
   default     = [10]
 }
-
-variable "instance_count" {
-  description = "How many instances of this type to create?"
-  type        = number
-  default     = 1
-}
