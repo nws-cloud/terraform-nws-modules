@@ -10,17 +10,17 @@ variable "zone" {
 
 variable "name" {
   type    = string
-  default = "CentOS 7.9 Min"
+  default = "Ubuntu 20.04 LTS"
 }
 
 variable "vm_name" {
   type    = string
-  default = "My VM: CentOS 7.9 Min"
+  default = "Ubuntu 20.04 LTS"
 }
 
 variable "os_type" {
   type    = string
-  default = "CentOS 7.2"
+  default = "Ubuntu 20.04 LTS"
 }
 
 variable "url" {

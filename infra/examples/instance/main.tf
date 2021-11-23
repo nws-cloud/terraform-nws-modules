@@ -12,8 +12,12 @@ terraform {
 module "instance" {
   source = "../../modules/instances"
 
-  zone       = var.zone
-  ips        = var.ips
-  network_id = var.network_id
+  zone           = var.zone
+  network_id     = var.network_id
+  ips            = var.ips
+  name           = var.name
+  instance_type  = var.instance_type
+  template       = var.template
+  root_disk_size = var.root_dist_size
 
 }

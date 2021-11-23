@@ -15,5 +15,25 @@ variable "network_id" {
 
 variable "ips" {
   type    = list(string)
-  default = ["10.0.1.16", "10.0.1.17"]
+  default = ["10.0.1.16"]
+}
+
+variable "name" {
+  type    = list(string)
+  default = ["VM0"]
+}
+
+variable "instance_type" {
+  type    = list(string)
+  default = ["t2.micro"]
+}
+
+variable "template" {
+  type    = list(string)
+  default = ["Ubuntu 20.04 LTS"]
+}
+
+variable "root_dist_size" {
+  type    = list(number)
+  default = [10]
 }
