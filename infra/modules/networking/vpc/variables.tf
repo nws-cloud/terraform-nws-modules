@@ -5,7 +5,7 @@ variable "zone" {
 
 variable "name" {
   type    = string
-  default = "alfa-vpc"
+  default = "my-vpc"
 }
 
 variable "cidr" {
@@ -20,5 +20,5 @@ variable "vpc_offering" {
 
 variable "domain" {
   type    = string
-  default = "alfa.local"
+  default = "my.local"
 }
