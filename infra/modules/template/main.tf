@@ -1,5 +1,5 @@
 terraform {
-  required_version = ">= 1.0"
+  required_version = ">= 1.10"
 
   required_providers {
     nws = {
@@ -21,4 +21,3 @@ resource "nws_template" "templ" {
   is_public        = var.is_public
   is_ready_timeout = var.timeout
 }
-

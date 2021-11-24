@@ -8,7 +8,7 @@ variable "zone" {
 }
 
 variable "name" {
-  description = "Your OS standard template name"
+  description = "Your OS template name"
   type        = string
 }
 
@@ -18,7 +18,7 @@ variable "os_type" {
 }
 
 variable "url" {
-  description = "Your template URL "
+  description = "Your template URL"
   type        = string
 }
 
@@ -36,7 +36,7 @@ variable "vm_name" {
 variable "timeout" {
   description = "Your template creation timeout"
   type        = number
-  default     = 1200
+  default     = 800
 }
 
 variable "hypervisor" {
