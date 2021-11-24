@@ -15,7 +15,7 @@ variable "domain" {
 
 variable "vpc_id" {
   type    = string
-  default = "712851cb-caa5-49e0-9bf2-f87f83c2d6f6"
+  default = ""
 }
 
 variable "network_offering" {

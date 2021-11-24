@@ -1,24 +1,32 @@
+# ---------------------------------------------------------------------------------------------------------------------
+# REQUIRED PARAMETERS
+# You must provide a value for each of these parameters.
+# ---------------------------------------------------------------------------------------------------------------------
 variable "zone" {
-  type    = string
-  default = "ru-msk-0"
+  description = "Your zone name"
+  type        = string
 }
 
 variable "name" {
-  type    = string
-  default = "my-vpc"
+  description = "Your VPC name"
+  type        = string
 }
 
 variable "cidr" {
-  type    = string
-  default = "10.0.1.0/24"
+  description = "Your VPC top CIDR"
+  type        = string
 }
-
+# ---------------------------------------------------------------------------------------------------------------------
+# OPTIONAL PARAMETERS
+# These parameters have reasonable defaults.
+# ---------------------------------------------------------------------------------------------------------------------
 variable "vpc_offering" {
-  type    = string
-  default = "Default VPC Offering"
+  description = "Your VPC service offering. See NWS Doc"
+  type        = string
+  default     = "Default VPC Offering"
 }
-
 variable "domain" {
-  type    = string
-  default = "my.local"
+  description = "Your VPC network domain name"
+  type        = string
+  default     = var.name + ".local"
 }

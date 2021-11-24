@@ -1,3 +1,14 @@
+terraform {
+  required_version = ">= 1.10"
+
+  required_providers {
+    nws = {
+      source  = "nws/nws"
+      version = "0.4.0"
+    }
+  }
+}
+
 resource "nws_vpc" "vpc" {
   name           = var.name
   cidr           = var.cidr
