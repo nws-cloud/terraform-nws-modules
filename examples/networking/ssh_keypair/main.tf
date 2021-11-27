@@ -9,7 +9,9 @@ terraform {
   }
 }
 
-resource "nws_ssh_keypair" "ssh_keypair" {
-  name       = var.name
-  public_key = file(var.path)
+module "ssh_keypair" {
+  source = "../../../modules/networking/ssh_keypair"
+
+  name = var.name
+  path = var.path
 }
