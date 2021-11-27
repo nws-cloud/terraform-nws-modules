@@ -1,5 +1,8 @@
 terraform.tfstate.d/
 .terraform*
 plan.out
+terraform.tfstate
+terraform.tfstate.backup
 
 providers.tf
+
