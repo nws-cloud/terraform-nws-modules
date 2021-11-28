@@ -2,11 +2,6 @@
 # REQUIRED PARAMETERS
 # You must provide a value for each of these parameters.
 # ---------------------------------------------------------------------------------------------------------------------
-variable "zone" {
-  description = "Your zone name"
-  type        = string
-}
-
 variable "network_id" {
   description = "Your subnet UUID, to which attach the instance"
   type        = string
@@ -41,7 +36,13 @@ variable "root_disk_size" {
 # OPTIONAL PARAMETERS
 # These parameters have reasonable defaults.
 # ---------------------------------------------------------------------------------------------------------------------
+variable "zone" {
+  description = "Your zone name"
+  type        = string
+  default     = "ru-msk-0"
+}
 variable "group" {
-  type    = string
-  default = "mygroup"
+  description = "Your instance group name"
+  type        = string
+  default     = "mygroup"
 }

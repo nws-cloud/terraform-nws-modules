@@ -4,7 +4,7 @@ terraform {
   required_providers {
     nws = {
       source  = "nws/nws"
-      version = "0.4.0"
+      version = "0.1.2"
     }
   }
 }
@@ -12,7 +12,6 @@ terraform {
 module "instance" {
   source = "../../modules/instances"
 
-  zone           = var.zone
   network_id     = var.network_id
   ips            = var.ips
   name           = var.name
