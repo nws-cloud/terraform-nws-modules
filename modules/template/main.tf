@@ -1,15 +1,15 @@
 terraform {
-  required_version = ">= 1.0.10"
+  required_version = ">= 1.1.5"
 
   required_providers {
     nws = {
-      source  = "nws/nws"
-      version = "0.1.2"
+      source  = "nws/nwscc"
+      version = "0.0.1"
     }
   }
 }
 
-resource "nws_template" "templ" {
+resource "nws_ec2_template" "templ" {
   name             = var.name
   display_text     = var.vm_name
   format           = var.format

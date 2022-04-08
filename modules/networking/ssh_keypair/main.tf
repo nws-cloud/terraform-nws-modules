@@ -1,15 +1,21 @@
 terraform {
-  required_version = ">= 1.0.10"
+  required_version = ">= 1.1.5"
 
   required_providers {
     nws = {
-      source  = "nws/nws"
-      version = "0.1.2"
+      source  = "nws/nwscc"
+      version = "0.0.1"
     }
   }
 }
 
-resource "nws_ssh_keypair" "ssh_keypair" {
-  name       = var.name
-  public_key = file(var.path)
+data "nws_ec2_domain" "dom" {
+  name = "personal"
+}
+
+resource "nws_ec2_sshkeypair" "ssh" {
+  name      = var.name
+  domain_id = data.nws_ec2_domain.dom.id
+  account   = "felix"
+  pubkey    = file(var.path)
 }

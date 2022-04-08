@@ -9,9 +9,6 @@ terraform {
   }
 }
 
-module "ssh_keypair" {
-  source = "../../../modules/networking/ssh_keypair"
-
+data "nws_ec2_zone" "zone" {
   name = var.name
-  path = var.path
 }
